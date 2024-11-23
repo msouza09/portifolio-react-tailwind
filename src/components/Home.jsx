@@ -15,7 +15,11 @@ const Home = () => {
           href="#projects"
           className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300"
         >
-          Veja Meus Projetos
+          Meus Projetos
+        </a>
+        <a href="https://github.com/msouza009" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6"
+        >
+          GitHub
         </a>
       </div>
 
