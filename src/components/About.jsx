@@ -6,8 +6,8 @@ const About = () => {
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6 text-center">Sobre Mim</h2>
         <p className="text-lg leading-relaxed">
-          Sou um desenvolvedor front-end com experiência em React, JavaScript e tecnologias modernas. 
-          Amo transformar ideias em realidade através de código bem estruturado e designs responsivos.
+        Sou um desenvolvedor front-end júnior aprendendo React, apaixonado por criar interfaces intuitivas e funcionais. 
+        Busco sempre melhorar minhas habilidades e enfrentar novos desafios, colaborando em projetos inovadores e impactantes.
         </p>
       </div>
     </section>
