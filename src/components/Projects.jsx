@@ -13,7 +13,7 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-6 text-center text-purpleTheme-dark">Meus Projetos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <a key={project.id} href={project.link} className="bg-gray-50 p-6 rounded-lg shadow-md">
+            <a key={project.id} href={project.link} target='_blank' className="bg-gray-50 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p>{project.description}</p>
               <img src={project.image} alt={project.title} className="mt-4 rounded" />
