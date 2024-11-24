@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faCode} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-scroll'
 
 const Home = () => {
   return (
@@ -11,14 +15,18 @@ const Home = () => {
         <p className="text-lg md:text-xl text-purple-200">
           Desenvolvedor Front-End apaixonado por criar experiências incríveis na web.
         </p>
-        <a
-          href="#projects"
-          className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300"
+        <Link
+          to="projects" 
+          smooth={true}   
+          duration={500}  
+          className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 cursor-pointer"
         >
+          <FontAwesomeIcon icon={faCode} className="text-1xl mr-1"/>
           Meus Projetos
-        </a>
-        <a href="https://github.com/msouza009" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6"
+        </Link>
+        <a href="https://github.com/msouza009" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl"
         >
+          <FontAwesomeIcon icon={faGithub} className="text-1xl mr-1"/>
           GitHub
         </a>
       </div>
