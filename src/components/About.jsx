@@ -17,7 +17,7 @@ const About = () => {
       <div>
         <div>
           <ul className="grid grid-cols-2 gap-4 max-w-5xl mx-auto px-4">
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faHtml5} className="text-[19px] mr-1"/>HTML</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faHtml5} className="text-[19px] mr-1"/> HTML</li>
             <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faCss} className="text-[19px] mr-1"/> CSS</li>
             <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faJs} className="text-[19px] mr-1"/>  JavaScript</li>
             <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faReact} className="text-[19px] mr-1"/> React</li>
