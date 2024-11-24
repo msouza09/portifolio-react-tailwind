@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBootstrap, faCss, faHtml5, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faJs } from '@fortawesome/free-brands-svg-icons'
+import { SiTailwindcss } from 'react-icons/si';
 
 const About = () => {
   return (
@@ -13,12 +17,12 @@ const About = () => {
       <div>
         <div>
           <ul className="grid grid-cols-2 gap-4 max-w-5xl mx-auto px-4">
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">HTML</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">CSS</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">JavaScript</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">React</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">Tailwind CSS</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md">Bootstrap</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faHtml5} className="text-[19px] mr-1"/>HTML</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faCss} className="text-[19px] mr-1"/> CSS</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faJs} className="text-[19px] mr-1"/>  JavaScript</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faReact} className="text-[19px] mr-1"/> React</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] flex items-center"><SiTailwindcss className="text-[19px] mr-2" />Tailwind CSS</li>
+            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px]"><FontAwesomeIcon icon={faBootstrap} className="text-[19px] mr-1"/> Bootstrap</li>
           </ul>
         </div>
       </div>
