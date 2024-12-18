@@ -22,7 +22,7 @@ const Home = () => {
           <FontAwesomeIcon icon={faCode} className="text-1xl mr-1"/>
           Meus Projetos
         </Link>
-        <a href="https://github.com/msouza009" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
+        <a href="https://github.com/msouza09" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
           <FontAwesomeIcon icon={faGithub} className="text-1xl mr-1"/>
           GitHub
         </a>
