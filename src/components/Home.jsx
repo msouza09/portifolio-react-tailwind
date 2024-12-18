@@ -1,13 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faGithub, faLinkedin, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 import {faCode} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-scroll'
 
 const Home = () => {
   return (
     <section className="bg-purple-700 dark:bg-gray-800 text-white h-screen flex flex-col md:flex-row justify-center items-center p-8 md:p-16">
-      {/* Texto de Apresentação */}
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold">
           Olá, eu sou <span className="text-purple-300 dark:text-blue-600">Matheus 🚀</span>
@@ -26,6 +25,10 @@ const Home = () => {
         <a href="https://github.com/msouza009" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
           <FontAwesomeIcon icon={faGithub} className="text-1xl mr-1"/>
           GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/matheus-souza-1a0622235" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
+          <FontAwesomeIcon icon={faLinkedin} className="text-1xl mr-1"/>
+          Linkedin
         </a>
       </div>
 
