@@ -12,7 +12,7 @@ const Home = () => {
           Olá, eu sou <span className="text-purple-300 dark:text-blue-600">Matheus 🚀</span>
         </h1>
         <p className="text-lg md:text-xl text-purple-200 dark:text-gray-100">
-          Desenvolvedor Front-End apaixonado por criar experiências incríveis na web.
+          Desenvolvedor Front-End e QA, apaixonado por criar experiências incríveis na web, planejando, executando e desenvolvendo testes para garantir qualidade e performance.
         </p>
         <Link
           to="projects" 
