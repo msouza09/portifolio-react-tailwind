@@ -4,7 +4,6 @@ const projects = [
   { id: 1, title: 'Microgravity Motion', image: '/img/microgravity-motion.png', link: 'https://github.com/EduHOA/SocioTech-NASA', description: 'Jogo do NASA Space Apps Challenge 2024 para melhorar a saúde de astronautas em missões espaciais através de desafios de microgravidade.', },
   { id: 2, title: 'Scientia', image: '/img/scientia.png', link: 'https://github.com/VibeTeech/Scientia---VibeTech', description: 'Quiz educativo desenvolvido para crianças, transformando o aprendizado em um jogo interativo e divertido.' },
   { id: 3, title: 'Dou um Help!',image: '/img/douumhelp.png', link: 'https://github.com/douumhelp/douumhelp', description: 'Aplicativo em desenvolvimento para conectar profissionais a serviços de reparo e manutenção doméstica.' },
-  { id: 4, title: 'Dou um Teste!',image: '/img/douumhelp.png', link: 'https://github.com/douumhelp/douumhelp', description: 'Aplicativo em desenvolvimento para conectar profissionais a serviços de reparo e manutenção doméstica.' },
 ];
 
 const Projects = () => {
