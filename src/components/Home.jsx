@@ -30,10 +30,6 @@ const Home = () => {
           <FontAwesomeIcon icon={faLinkedin} className="text-1xl mr-1"/>
           Linkedin
         </a>
-        <a href="https://www.linkedin.com/in/matheus-souza-1a0622235" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-          <FontAwesomeIcon icon={faLinkedin} className="text-1xl mr-1"/>
-          TESTE
-        </a>
       </div>
 
       <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
