@@ -21,7 +21,7 @@ const Contact = () => {
             <FontAwesomeIcon icon={faInstagram} className="text-1xl mr-1" />
             Instagram
           </a>
-          <a href="https://wa.me/44991740896" target="__blank" className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark hover:text-white m-2 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
+          <a href="https://wa.me/44998667449" target="__blank" className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark hover:text-white m-2 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
             <FontAwesomeIcon icon={faWhatsapp} className="text-1xl mr-1" />
             WhatsApp
           </a>
