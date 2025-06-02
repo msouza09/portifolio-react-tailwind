@@ -1,21 +1,40 @@
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBug } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
+  const staticPart = "Qualidade";
+  const typingTarget = " vai além de não ter bugs.";
+  const [displayText, setDisplayText] = useState('');
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (index < typingTarget.length) {
+        setDisplayText((prev) => prev + typingTarget.charAt(index));
+        setIndex((prev) => prev + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50); // velocidade da digitação
+
+    return () => clearInterval(interval);
+  }, [index]);
+
   return (
     <section className="bg-gray-50 dark:bg-grayThemeDark text-gray-800 dark:text-white min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 transition-colors duration-300">
       <div className="max-w-7xl w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
-        
+
         {/* Texto & Ações */}
         <div className="space-y-6 text-center md:text-left w-full">
           <span className="inline-block bg-green-100 text-greenThemeDark px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-widest shadow-sm">
             Quality Assurance Júnior
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-            <span className="text-greenTheme">Qualidade</span> vai além de não ter bugs.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight min-h-[4rem]">
+            <span className="text-greenTheme">{staticPart}</span>{displayText}
           </h1>
 
           <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0">
