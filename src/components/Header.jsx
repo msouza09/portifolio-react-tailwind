@@ -5,51 +5,48 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ isDarkTheme, setIsDarkTheme }) => {
   return (
-    <header className="bg-purpleTheme-dark text-white shadow-md fixed w-full z-10 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Matheus Souza</h1>
-        <div className="flex items-center gap-6">
-          <nav>
-            <ul className="flex gap-4">
-              <li>
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  className="text-white hover:text-purpleTheme-dark cursor-pointer"
-                >
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  className="text-white hover:text-purpleTheme-dark cursor-pointer"
-                >
-                  Projetos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  className="text-white hover:text-purpleTheme-dark cursor-pointer"
-                >
-                  Contato
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <button
-              onClick={() => setIsDarkTheme(!isDarkTheme)}
-              className={`px-4 py-2 rounded-md transition-all flex items-center justify-center
-                ${isDarkTheme ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-purple-500 hover:bg-purple-400 text-white'}`}>
-              <FontAwesomeIcon icon={isDarkTheme ? faSun : faMoon} className="text-lg" />
+    <header className="fixed top-0 left-0 w-full z-50 bg-gray-50 dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* Nome / Logo */}
+        <h1 className="text-2xl font-bold text-greenTheme dark:text-greenTheme">Matheus Souza</h1>
+
+        {/* Navegação */}
+        <nav className="hidden md:flex gap-6">
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="text-gray-700 dark:text-gray-300 hover:text-greenTheme cursor-pointer transition"
+          >
+            Sobre
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="text-gray-700 dark:text-gray-300 hover:text-greenTheme cursor-pointer transition"
+          >
+            Projetos
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="text-gray-700 dark:text-gray-300 hover:text-greenTheme cursor-pointer transition"
+          >
+            Contato
+          </Link>
+        </nav>
+
+        {/* Botão de Tema */}
+        <button
+          onClick={() => setIsDarkTheme(!isDarkTheme)}
+          className="ml-4 px-3 py-2 rounded-md text-white bg-greenTheme hover:bg-greenThemeDark transition"
+          aria-label="Alternar tema"
+        >
+          <FontAwesomeIcon icon={isDarkTheme ? faSun : faMoon} />
         </button>
-        </div>
       </div>
     </header>
   );

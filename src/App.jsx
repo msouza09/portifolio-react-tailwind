@@ -10,16 +10,17 @@ function App() {
 
   return (
     <div className={isDarkTheme ? "dark" : ""}>
-      <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+      <div className="min-h-screen bg-white text-textDark dark:bg-grayThemeDark dark:text-white font-outfit transition-colors duration-300 overflow-x-hidden">
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-        <Home sDarkTheme={isDarkTheme} />
-        <About />
-        <Projects />
-        <Contact />
+        <main>
+          <Home isDarkTheme={isDarkTheme} />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
       </div>
     </div>
   );
 }
 
-
-export default App
+export default App;
