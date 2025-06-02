@@ -1,34 +1,53 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faCss, faHtml5, faReact } from '@fortawesome/free-brands-svg-icons'
-import { faClipboardList } from "@fortawesome/free-solid-svg-icons"; 
-import { faJs } from '@fortawesome/free-brands-svg-icons'
-import { SiTailwindcss } from 'react-icons/si';
-import { faCogs, faClipboardCheck, faBug } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faClipboardList,
+  faCogs,
+  faClipboardCheck,
+  faBug,
+  faSearch,
+  faFlagCheckered
+} from '@fortawesome/free-solid-svg-icons';
+
+const skills = [
+  { icon: faClipboardList, label: 'Planejamento de Testes' },
+  { icon: faClipboardCheck, label: 'Execução de Testes' },
+  { icon: faCogs, label: 'Automação (Selenium / Cypress)' },
+  { icon: faBug, label: 'Gestão e Reporte de Bugs' },
+  { icon: faSearch, label: 'Testes Exploratórios' },
+  { icon: faFlagCheckered, label: 'Validação de Critérios de Aceite' }
+];
 
 const About = () => {
   return (
-    <section id="about" className="bg-white text-purpleTheme-dark py-16 dark:bg-gray-800">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-6 text-center dark:text-white">Sobre Mim</h2>
-        <p className="text-lg leading-relaxed mb-6 dark:text-white">
-        Sou um Desenvolvedor Front-End Júnior, explorando React com foco em criar interfaces funcionais e intuitivas. Também atuo como QA, planejando, executando e desenvolvendo testes para garantir qualidade. Estou sempre aprendendo e buscando novos desafios em projetos inovadores.
+    <section
+      id="about"
+      className="bg-gray-50 dark:bg-grayThemeDark py-20 transition-colors duration-300"
+    >
+      <div className="max-w-6xl mx-auto px-6 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+          Sobre Mim
+        </h2>
+        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-12 text-center max-w-3xl mx-auto leading-relaxed">
+          Sou um QA Júnior comprometido com a entrega de software funcional, estável e com
+          excelente experiência. Atuo com testes manuais e automatizados, sempre focado em
+          agregar valor ao produto, detectar falhas e melhorar continuamente os processos.
         </p>
-      </div>
-      <div>
-        <div>
-          <ul className="grid grid-cols-2 gap-4 max-w-5xl mx-auto px-4">
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faHtml5} className="text-[19px] mr-1"/> HTML</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faCss} className="text-[19px] mr-1"/> CSS</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faJs} className="text-[19px] mr-1"/>  JavaScript</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faReact} className="text-[19px] mr-1"/> React</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg flex items-center"><SiTailwindcss className="text-[19px] mr-2" />Tailwind CSS</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faBootstrap} className="text-[19px] mr-1"/> Bootstrap</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faClipboardList} className="text-[19px] mr-1"/> Planejamento de Testes</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faCogs} className="text-[19px] mr-1"/> Automação de Testes</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faClipboardCheck} className="text-[19px] mr-1"/> Execução de Testes</li>
-            <li className="bg-purple-100 p-4 rounded-lg shadow-md text-[19px] dark:bg-gray-700 dark:text-gray-200 dark:shadow-lg"><FontAwesomeIcon icon={faBug} className="text-[19px] mr-1"/> Gestão de Bugs</li>
-          </ul>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 bg-white dark:bg-gray-800 p-5 rounded-xl shadow-sm hover:shadow-lg transition duration-300 border border-transparent hover:border-green-200 dark:hover:border-greenTheme/40"
+            >
+              <div className="text-greenTheme text-2xl shrink-0">
+                <FontAwesomeIcon icon={skill.icon} />
+              </div>
+              <p className="text-gray-800 dark:text-gray-200 font-medium text-base sm:text-[15px]">
+                {skill.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

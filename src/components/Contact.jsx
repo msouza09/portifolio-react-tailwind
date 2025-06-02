@@ -1,33 +1,41 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-white text-purpleTheme-dark py-16 dark:bg-gray-800 dark:text-white">
-      <div className="max-w-5xl mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-6">Entre em Contato</h2>
-        <p className="mb-6">Você pode me encontrar nas redes sociais ou enviar uma mensagem diretamente.</p>
-        <div className="flex flex-col sm:flex-row justify-center items-center">
+    <section
+      id="contact"
+      className="bg-gray-50 dark:bg-grayThemeDark py-20 transition-colors duration-300"
+    >
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
+          Vamos conversar?
+        </h2>
+        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+          Me envie um e-mail ou chame no LinkedIn para falarmos sobre QA, automação de testes e como posso contribuir com seu time.
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
+          {/* Email */}
           <a
             href="mailto:szmatheussouza@gmail.com"
-            className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark m-2 hover:text-white dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500"
+            className="flex items-center gap-2 bg-white dark:bg-transparent border border-greenTheme text-greenTheme px-6 py-3 rounded-md hover:bg-greenTheme hover:text-white transition-all duration-300 shadow-sm dark:shadow-md"
           >
-            <FontAwesomeIcon icon={faEnvelope} className="text-1xl mr-1" />
-            Email
+            <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
+            <span>Email</span>
           </a>
-          <a href="https://www.instagram.com/msouza_09/" target="__blank" className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark hover:text-white m-2 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-            <FontAwesomeIcon icon={faInstagram} className="text-1xl mr-1" />
-            Instagram
-          </a>
-          <a href="https://wa.me/44998667449" target="__blank" className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark hover:text-white m-2 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-            <FontAwesomeIcon icon={faWhatsapp} className="text-1xl mr-1" />
-            WhatsApp
-          </a>
-          <a href="https://www.linkedin.com/in/matheus-souza-1a0622235/" target="__blank" className="bg-purpleTheme-light text-purpleTheme-dark px-6 py-3 rounded-md hover:bg-purpleTheme-dark hover:text-white m-2 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-            <FontAwesomeIcon icon={faLinkedin} className="text-1xl mr-1" />
-            Linkedin
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/matheus-souza-1a0622235/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white dark:bg-transparent border border-greenTheme text-greenTheme px-6 py-3 rounded-md hover:bg-greenTheme hover:text-white transition-all duration-300 shadow-sm dark:shadow-md"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="text-lg" />
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>

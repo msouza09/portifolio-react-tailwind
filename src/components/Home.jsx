@@ -1,43 +1,69 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faGithub, faLinkedin, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
-import {faCode} from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-scroll'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-scroll';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faBug } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   return (
-    <section className="bg-purple-700 dark:bg-gray-800 text-white h-screen flex flex-col md:flex-row justify-center items-center p-8 md:p-16">
-      <div className="md:w-1/2 text-center md:text-left space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold">
-          Olá, eu sou <span className="text-purple-300 dark:text-blue-600">Matheus 🚀</span>
-        </h1>
-        <p className="text-lg md:text-xl text-purple-200 dark:text-gray-100">
-          Desenvolvedor Front-End e QA, apaixonado por criar experiências incríveis na web, planejando, executando e desenvolvendo testes para garantir qualidade e performance.
-        </p>
-        <Link
-          to="projects" 
-          smooth={true}   
-          duration={500}  
-          className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 cursor-pointer dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-          <FontAwesomeIcon icon={faCode} className="text-1xl mr-1"/>
-          Meus Projetos
-        </Link>
-        <a href="https://github.com/msouza09" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-          <FontAwesomeIcon icon={faGithub} className="text-1xl mr-1"/>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/matheus-souza-1a0622235" target='_blank' className="inline-block bg-purple-500 px-6 py-3 rounded-md text-white font-medium shadow-md hover:bg-purple-400 transition-all duration-300 ml-6 text-1xl dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:shadow-lg dark:border-gray-500 dark:focus:ring-gray-500">
-          <FontAwesomeIcon icon={faLinkedin} className="text-1xl mr-1"/>
-          Linkedin
-        </a>
-      </div>
+    <section className="bg-gray-50 dark:bg-grayThemeDark text-gray-800 dark:text-white min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 transition-colors duration-300">
+      <div className="max-w-7xl w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* Texto & Ações */}
+        <div className="space-y-6 text-center md:text-left w-full">
+          <span className="inline-block bg-green-100 text-greenThemeDark px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-widest shadow-sm">
+            Quality Assurance Júnior
+          </span>
 
-      <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-        <img 
-          src="/img/matheus.jpg" 
-          alt="matheus" 
-          className="rounded-full w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 border-4 border-purple-500 dark:border-blue-700 shadow-lg"
-        />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+            <span className="text-greenTheme">Qualidade</span> vai além de não ter bugs.
+          </h1>
+
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0">
+            Olá! Sou Matheus, QA júnior com foco em testes funcionais, exploratórios e automação. Valorizo software confiável, usável e bem testado.
+          </p>
+
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer flex items-center gap-2 bg-greenTheme text-white px-6 py-3 rounded-lg shadow-md hover:bg-greenThemeDark transition"
+            >
+              <FontAwesomeIcon icon={faBug} />
+              Ver Projetos
+            </Link>
+            <a
+              href="https://github.com/msouza09"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 border border-greenTheme text-greenTheme px-6 py-3 rounded-lg hover:bg-greenTheme hover:text-white transition shadow-sm"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/matheus-souza-1a0622235"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 border border-greenTheme text-greenTheme px-6 py-3 rounded-lg hover:bg-greenTheme hover:text-white transition shadow-sm"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        {/* Imagem */}
+        <div className="relative flex justify-center w-full">
+          <div className="relative z-10 rounded-full overflow-hidden border-4 border-greenTheme shadow-lg w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <img
+              src="/img/matheus.jpg"
+              alt="matheus"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="absolute inset-0 z-0 rounded-full blur-2xl bg-greenTheme opacity-30 scale-110" />
+        </div>
       </div>
     </section>
   );
