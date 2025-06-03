@@ -8,7 +8,7 @@ const projects = [
     link: 'https://cloud.cypress.io/projects/71ov9i/runs',
     description:
       'Automação de testes end-to-end utilizando Cypress no sistema OrangeHRM, validando fluxo de login, cadastro e logout.',
-    stack: ['Cypress', 'E2E', 'Funcional']
+    stack: ['Cypress', 'E2E', 'Testes Funcionais']
   },
   {
     id: 2,
