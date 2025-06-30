@@ -21,11 +21,11 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Buggy Cars Rating',
-    image: '/img/buggy-cars.png',
-    link: 'https://cloud.cypress.io/projects/wne4rr/runs',
+    title: 'SauceDemo',
+    image: '/img/sauce-demo.png',
+    link: 'https://cloud.cypress.io/projects/v7ypd1/runs',
     description:
-      'Automação de testes end-to-end com Cypress no Buggy Cars Rating, cobrindo login, cadastro de usuários e submissão de avaliações. Abrange cenários positivos e negativos.',
+      'Automação de testes end-to-end com Cypress no SauceDemo, cobrindo todos os fluxos de login, cenários completos de compra com dados dinâmicos e validação do filtro de ordenação.',
     stack: ['Cypress', 'E2E', 'Testes Funcionais']
   }
 ];
